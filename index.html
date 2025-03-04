@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generate QR-Code</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="generator">
+    <div class="generator__left">
+      <h1 class="generator__title">Generate QR-Code</h1>
+      <div class="generator__item">
+        <label for="text-url" class="generator__label">URL or text</label>
+        <input type="text" id="text-url" placeholder="Enter URL or text" class="generator__input">
+      </div>
+      <div class="generator__item">
+        <label class="generator__label">Size (px)</label>
+        <div class="generator__radio-group">
+          <input type="radio" id="size150" name="qr-size" value="150" class="generator__radio">
+          <label for="size150" class="generator__radio-label">150px</label>
+
+          <input type="radio" id="size200" name="qr-size" value="200" class="generator__radio">
+          <label for="size200" class="generator__radio-label">200px</label>
+
+          <input type="radio" id="size300" name="qr-size" value="300" class="generator__radio" checked>
+          <label for="size300" class="generator__radio-label">300px</label>
+        </div>
+      </div>
+      <button type="button" class="generator__btn generator__btn--small" id="generate">Create QR-Code</button>
+    </div>
+    <div class="generator__right">
+      <div class="generator__qr-code">
+        <canvas id="qrcode"></canvas>
+      </div>
+      <button type="button" class="generator__btn" id="download">Download QR-Code</button>
+    </div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>  
+<script src="main.js"></script>
+</body>
+</html>

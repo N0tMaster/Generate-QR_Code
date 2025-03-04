@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  border: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+  background: #220130;
+  padding: 20px;
+}
+
+.generator {
+  background: rgba(178, 33, 246, 0.09);
+  backdrop-filter: blur(14.399px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 48px;
+  padding: 20px;
+  width: 100%;
+  max-width: 710px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.generator__left, .generator__right {
+  width: 100%;
+}
+
+.generator__title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.generator__item {
+  margin-bottom: 15px;
+}
+
+.generator__label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.generator__input {
+  width: 100%;
+  border-radius: 25px;
+  background: #321b43;
+  padding: 6px 15px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+}
+
+.generator__btn {
+  border-radius: 25px;
+  background-color: #773da6;
+  padding: 9px 20px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.generator__btn:hover {
+  background-color: #502970;
+}
+
+.generator__btn--small {
+  width: auto;
+  padding: 9px 30px;
+}
+
+.generator__qr-code {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  border-radius: 25px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.generator__radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.generator__radio {
+  display: none;
+}
+
+.generator__radio-label {
+  border-radius: 5px;
+  cursor: pointer;
+  background: #321b43;
+  padding: 6px 15px;
+  user-select: none;
+  color: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  transition: color 0.3s;
+}
+
+.generator__radio:checked + .generator__radio-label {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .generator {
+      flex-direction: column;
+      padding: 15px;
+  }
+
+  .generator__left, .generator__right {
+      flex: 1 1 100%;
+  }
+
+  .generator__title {
+      font-size: 20px;
+  }
+
+  .generator__btn--small {
+      width: 100%;
+  }
+
+  .generator__qr-code {
+      width: 100%;
+      height: auto;
+  }
+}
